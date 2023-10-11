@@ -41,9 +41,9 @@ class ViewController: UIViewController {
         let actualAnswer = quiz[questionNumber].answer//題庫的「答案」位置
         
         if userAnswer == actualAnswer{
-            print("Right!")
+            sender.backgroundColor = UIColor.green
         }else{
-            print("Wrong!")
+            sender.backgroundColor = UIColor.red
         }
         
         // 避免題庫不夠導致 APP 閃退
@@ -54,15 +54,19 @@ class ViewController: UIViewController {
             
         }
         
-        updateUI()
+        //利用時間延遲，才能觀察到按按鈕後的顏色變化
+        Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(updateUI), userInfo: nil, repeats: false)
+        
         
     }
     
     // 設定 update UI func 讓它在首次運行和每次按按鈕時都能被調用。
     
-    func updateUI(){
+    @objc func updateUI(){
         questionLabel.text = quiz[questionNumber].text // 題庫的「問題」位置
-        
+        trueButton.backgroundColor = UIColor.clear //重設按下按鈕後的顏色
+        falseButton.backgroundColor = UIColor.clear
+
     }
     
 
