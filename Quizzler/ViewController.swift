@@ -67,7 +67,8 @@ class ViewController: UIViewController {
         trueButton.backgroundColor = UIColor.clear //重設按下按鈕後的顏色
         falseButton.backgroundColor = UIColor.clear
 
-        progressBar.progress = Float(questionNumber + 1) / Float (quiz.count) // 隨題目顯示進度條，由於計算從 0 開始， 0 / 0 = 0 ，所以要在 questionNumber + 1 ，才會完整顯示進度條
+        // 更新進度條
+        progressBar.progress = Float(questionNumber + 1) / Float (quiz.count) // 隨答題顯示進度，由於計算從 0 開始， 0 / 0 = 0，會跑不滿進度條，所以要在 questionNumber + 1 ，讓數字被整除，才會完整顯示進度條
         
         
     }
