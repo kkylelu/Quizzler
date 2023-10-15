@@ -66,6 +66,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="scoreLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTs-cC-C9z">
+                                <rect key="frame" x="132" y="87" width="128" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -74,6 +81,7 @@
                         <outlet property="falseButton" destination="Kd3-J9-hUj" id="myV-Jo-vYQ"/>
                         <outlet property="progressBar" destination="40b-6v-RmY" id="c98-ig-can"/>
                         <outlet property="questionLabel" destination="2Ep-5p-SvS" id="Ry7-eQ-7fG"/>
+                        <outlet property="scoreLabel" destination="gTs-cC-C9z" id="uVN-qj-yil"/>
                         <outlet property="trueButton" destination="zHc-f8-v15" id="lmU-Rt-qFz"/>
                     </connections>
                 </viewController>
